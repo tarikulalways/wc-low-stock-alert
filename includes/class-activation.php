@@ -2,7 +2,7 @@
 
 namespace LSAW\Includes;
 
-if ( ! defined('ABSPATH') ) {
+if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
@@ -11,7 +11,7 @@ class Activation {
     public static function active_lsaw() {
         global $wpdb;
 
-        $table = $wpdb->prefix . 'lsaw_alert_logs';
+        $table           = $wpdb->prefix . 'lsaw_alert_logs';
         $charset_collate = $wpdb->get_charset_collate();
 
         $sql = "CREATE TABLE $table (
@@ -23,8 +23,10 @@ class Activation {
         ) $charset_collate;";
 
         require_once ABSPATH . 'wp-admin/includes/upgrade.php';
-        dbDelta($sql);
+        dbDelta( $sql );
 
-        update_option('stock_threshold', 5);
+        if ( get_option( 'stock_threshold' ) === false ) {
+            update_option( 'stock_threshold', 5 );
+        }
     }
 }

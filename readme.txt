@@ -8,7 +8,7 @@ Stable tag: 1.0.0
 License: GPLv2 or later  
 License URI: https://www.gnu.org/licenses/gpl-2.0.html  
 
-Get instant email alerts when any product in your WooCommerce store runs low on stock. Stay one step ahead and never lose sales due to out-of-stock items!
+Receive instant email alerts when any WooCommerce product stock runs low. Stay ahead and prevent lost sales due to out-of-stock items.
 
 == Description ==
 
